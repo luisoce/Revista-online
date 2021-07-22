@@ -1,0 +1,50 @@
+// SECCION DERECHA
+.list-contenido {
+
+    // MODO CELULAR
+    @include phone-view {
+        display: none;
+    }
+
+    // MODOO TABLET
+    @include tablet-view {
+        width: 20%;
+        margin-right: 1rem;
+        // position: absolute;
+        float: right;
+        .list-contenido__nosotros {
+            h1 {
+                font-family: $tp-font;
+            }
+            p {
+                font-family: $tp-font;
+            }
+            border-bottom: 1px solid gray;    
+        }
+        .list-contenido__tags {
+            padding-bottom: 1rem;
+            ul {
+                display: inline-flex;
+                list-style: none;
+            }
+            li {
+                margin: 4px;
+                padding: 2px;
+                text-align: center;
+                color: #ffffff;
+                background-color: blue;
+            }
+            border-bottom: 1px solid gray; 
+        }
+        .list-contenido__destacadas {
+            .list-contenido__item {
+                h4 {
+                    font-family: $tp-font;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

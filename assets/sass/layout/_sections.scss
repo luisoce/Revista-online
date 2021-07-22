@@ -1,0 +1,87 @@
+// SECCION IZQUIERDA
+.list-noticias {
+    float: left;
+    display: grid;
+
+    // MODO CELULAR
+    @include phone-view {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: .5rem;    
+        margin: 0 5%;  
+        .list-noticias__cuerpo {
+            img {
+                width: 100%;
+                height: 200px;
+            }
+            p {
+                font-family: $tp-font;
+                font-size: $fs-x-small;
+            }
+        }  
+    }
+
+    // MODO TABLET
+    @include tablet-view {
+        width: 70%;
+        padding-left: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: .5rem;
+        .list-noticias__cuerpo {
+            img {
+                width: 100%;
+                height: 300px;
+            }
+            p {
+                font-family: $tp-font;
+                font-size: $fs-x-small;
+            }
+        }
+    }
+
+    // MODO NOTEBOOK
+    @include laptop-view {
+        width: 70%;
+        padding-left: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: .5rem;
+        .list-noticias__cuerpo {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            p {
+                font-family: $tp-font;
+                font-size: $fs-x-small;
+            }
+        }
+    }
+    .list-noticias__cabecera {
+        font-family: $tp-font;
+        font-size: $fs-small;
+    }
+    
+}
+
+// SECCION Y SUSCRIPCION
+.newsletter {
+    width: 100%;
+    font-family: $tp-font;
+    background-color: $bc-newsletter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    .newsletter__group {
+        input {
+            padding: .5rem;
+            border-style: none;
+        }
+        button {
+            padding: .5rem;
+            background-color: #ff8051;
+            color: #ffffff;
+            border-style: none;
+        }
+    }
+}

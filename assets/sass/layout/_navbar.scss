@@ -1,0 +1,71 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    padding-top: 5px;
+    display: flex;
+    border-bottom: 1px solid gray;
+    font-family: $tp-font;
+    .navbar__logo {
+        width: 20%;
+        padding-left: 1rem;
+        padding-top: .75rem;
+        font-size: $fs-x-large;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-flex;
+    }
+
+    // MODO CELULAR
+    @include phone-view {
+        .navbar__menu {
+            width: 55%;
+            display: inline-flex;
+            margin-left: auto;
+            margin-right: 1rem;
+            margin-top: 1rem;
+            justify-content: flex-end;
+            .navbar__contenido {
+                display: inline-flex;
+                list-style: none;
+                .input-menu {
+                    border-radius: 10px;
+                    width: 5rem;
+                }
+            }
+        }
+
+        .navbar__nosotros {
+            display: none;
+        }
+        .navbar__contacto {
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-right: 2rem;
+        }
+    }
+
+    // MODO TABLET
+    @include tablet-view {
+        .navbar__menu {
+            width: 75%;
+            // padding: 2rem;
+            display: inline-flex;
+            margin-left: auto;
+            margin-right: 1rem;
+            margin-top: 1rem;
+            justify-content: flex-end;
+            .navbar__contenido {
+                display: inline-flex;
+                list-style: none;
+                .input-menu {
+                    border-radius: 30px;
+                }
+            }
+        }
+        li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-right: 2rem;
+        }
+    }
+}

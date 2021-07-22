@@ -1,0 +1,197 @@
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  padding-top: 5px;
+  display: flex;
+  border-bottom: 1px solid gray;
+  font-family: monospace;
+}
+.navbar .navbar__logo {
+  width: 20%;
+  padding-left: 1rem;
+  padding-top: 0.75rem;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-flex;
+}
+@media (max-width: 639px) {
+  .navbar .navbar__menu {
+    width: 55%;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+  }
+  .navbar .navbar__menu .navbar__contenido {
+    display: inline-flex;
+    list-style: none;
+  }
+  .navbar .navbar__menu .navbar__contenido .input-menu {
+    border-radius: 10px;
+    width: 5rem;
+  }
+  .navbar .navbar__nosotros {
+    display: none;
+  }
+  .navbar .navbar__contacto {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 640px) {
+  .navbar .navbar__menu {
+    width: 75%;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+  }
+  .navbar .navbar__menu .navbar__contenido {
+    display: inline-flex;
+    list-style: none;
+  }
+  .navbar .navbar__menu .navbar__contenido .input-menu {
+    border-radius: 30px;
+  }
+  .navbar li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 2rem;
+  }
+}
+
+.list-noticias {
+  float: left;
+  display: grid;
+}
+@media (max-width: 639px) {
+  .list-noticias {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
+    margin: 0 5%;
+  }
+  .list-noticias .list-noticias__cuerpo img {
+    width: 100%;
+    height: 200px;
+  }
+  .list-noticias .list-noticias__cuerpo p {
+    font-family: monospace;
+    font-size: 12px;
+  }
+}
+@media (min-width: 640px) {
+  .list-noticias {
+    width: 70%;
+    padding-left: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+  }
+  .list-noticias .list-noticias__cuerpo img {
+    width: 100%;
+    height: 300px;
+  }
+  .list-noticias .list-noticias__cuerpo p {
+    font-family: monospace;
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .list-noticias {
+    width: 70%;
+    padding-left: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+  }
+  .list-noticias .list-noticias__cuerpo img {
+    width: 100%;
+    height: 100%;
+  }
+  .list-noticias .list-noticias__cuerpo p {
+    font-family: monospace;
+    font-size: 12px;
+  }
+}
+.list-noticias .list-noticias__cabecera {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.newsletter {
+  width: 100%;
+  font-family: monospace;
+  background-color: #f2f4f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+.newsletter .newsletter__group input {
+  padding: 0.5rem;
+  border-style: none;
+}
+.newsletter .newsletter__group button {
+  padding: 0.5rem;
+  background-color: #ff8051;
+  color: #ffffff;
+  border-style: none;
+}
+
+@media (max-width: 639px) {
+  .list-contenido {
+    display: none;
+  }
+}
+@media (min-width: 640px) {
+  .list-contenido {
+    width: 20%;
+    margin-right: 1rem;
+    float: right;
+  }
+  .list-contenido .list-contenido__nosotros {
+    border-bottom: 1px solid gray;
+  }
+  .list-contenido .list-contenido__nosotros h1 {
+    font-family: monospace;
+  }
+  .list-contenido .list-contenido__nosotros p {
+    font-family: monospace;
+  }
+  .list-contenido .list-contenido__tags {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+  }
+  .list-contenido .list-contenido__tags ul {
+    display: inline-flex;
+    list-style: none;
+  }
+  .list-contenido .list-contenido__tags li {
+    margin: 4px;
+    padding: 2px;
+    text-align: center;
+    color: #ffffff;
+    background-color: blue;
+  }
+  .list-contenido .list-contenido__destacadas .list-contenido__item h4 {
+    font-family: monospace;
+  }
+  .list-contenido .list-contenido__destacadas .list-contenido__item img {
+    width: 100%;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 0.4rem;
+}
+
+/*# sourceMappingURL=style.css.map */
